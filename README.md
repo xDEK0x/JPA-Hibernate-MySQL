@@ -2,9 +2,9 @@
 
 ## Proyecto Java / Java Application
 
-- **Genera el nombre de la unidad de persistencia "Persistencia" y la conexión a la BD: "test"**
+- **Genera el nombre de la unidad de persistencia "Persistencia" y la conexión a la BD: "jpa_hibernate_mysql"**
 
-- **Persistiendo la entidad "Empleado" en la tabla "EMPLEADO" de la base de datos "test"**
+- **Persistiendo la entidad "Empleado" en la tabla "EMPLEADO" de la base de datos "jpa_hibernate_mysql"**
 
 - **Creamos el EntityManager y realizamos las operaciones ("persist", "merge", "remove")**
 
