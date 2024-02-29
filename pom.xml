@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- !Configuración de Maven para el proyecto jpaPrueba -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- !Identificación del grupo al que pertenece el proyecto -->
+    <groupId>ar.com.deko</groupId>
+
+    <!-- !Identificación única del artefacto generado por el proyecto -->
+    <artifactId>jpaHibernateMysql</artifactId>
+
+    <!-- !Versión del artefacto generado -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- !Propiedades del proyecto, como la versión del compilador y la codificación de fuente -->
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- !Dependencias del proyecto -->
+    <dependencies>
+        <!-- !Dependencia para JPA - Java EE (Java Persistence API) -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- !Dependencia para Hibernate ORM (Object-Relational Mapping) -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.4.4.Final</version>
+        </dependency>
+
+        <!-- !Dependencia para el conector JDBC de MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.3.0</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

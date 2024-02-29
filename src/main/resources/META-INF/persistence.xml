@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- !Configuración de persistencia para el proyecto jpaHibernateMySql -->
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="Persistencia" transaction-type="RESOURCE_LOCAL">
+
+    <!-- !Proveedor de persistencia -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <!-- !Clases de entidad -->
+    <!-- !Agrega aquí tus clases de entidad -->
+    <class>entity.Empleado</class>
+
+    <!-- !Propiedades de la unidad de persistencia -->
+    <properties>
+      <!-- !URL de la base de datos -->
+      <!-- !Podemos usar el parámetro "createDatabaseIfNotExist=true" para que cree automáticamente el schema si no existe -->
+      <!-- !Podemos agregar "serverTimezone=UTC" para especificar la zona horaria del servidor -->
+      <!-- !El ampersand (&) se utiliza para separar múltiples parámetros en la parte de consulta -->
+    <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/jpa_hibernate_mysql?createDatabaseIfNotExist=true&amp;serverTimezone=UTC"/>
+
+    <!-- !Usuario y contraseña de la base de datos -->
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <property name="jakarta.persistence.jdbc.password" value="12345678"/>
+
+      <!-- !Driver JDBC para MySQL -->
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+
+      <!-- !Dialecto de Hibernate para MySQL -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+     <!-- !Formato SQL para mejor legibilidad -->
+      <property name="hibernate.format_sql" value="true"/>
+
+      <!-- !Crear automáticamente el esquema con Hibernate-->
+      <property name="hibernate.hbm2ddl.auto" value="create"/>
+
+      <!-- !Otras propiedades -->
+      <!-- !Crear o actualizar automáticamente el esquema con jakarta-->
+      <!-- <property name="jakarta.persistence.schema-generation.database.action" value="create"/> -->
+   </properties>
+ </persistence-unit>
+</persistence>
